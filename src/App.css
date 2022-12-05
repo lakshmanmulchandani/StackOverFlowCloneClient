@@ -12,4 +12,12 @@
     width: calc(100% - 164px);
     padding: 24px;
     box-sizing: border-box;
+    float: left;
 }
+
+
+@media (max-width: 900px) {
+    .home-container-2 {
+      width: 100%;
+    }
+  }

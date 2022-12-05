@@ -8,7 +8,6 @@ const DisplayQuestion = () => {
     <div className='home-container-1'>
       <LeftSidebar />
       <div className='home-container-2'>
-        <>Hello World</>
         <QuestionsDetails />
         <RightSidebar />
       </div>

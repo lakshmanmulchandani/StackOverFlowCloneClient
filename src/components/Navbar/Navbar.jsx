@@ -34,21 +34,21 @@ const Navbar = () => {
   return (
     <nav className='main-nav'>
       <div className='navbar'>
-        <Link to='/' className='nav-item nav-logo'>
+        <Link to='/' className='nav-item nav-logo togolater'>
           <img src={logo} alt='logo' />
         </Link>
-        <Link to='/' className='nav-item nav-btn'>
+        <Link to='/' className='nav-item nav-btn togo'>
           About
         </Link>
-        <Link to='/' className='nav-item nav-btn'>
+        <Link to='/' className='nav-item nav-btn togo'>
           Products
         </Link>
-        <Link to='/' className='nav-item nav-btn'>
+        <Link to='/' className='nav-item nav-btn togo'>
           For Teams
         </Link>
         <form>
           <input type='text' placeholder='Search...' />
-          <img src={search} alt='search' width='18' className='search-icon' />
+          {/* <img src={search} alt='search' width='18' className='search-icon' /> */}
         </form>
         {User === null ? (
           <Link to='/Auth' className='nav-item nav-links'>

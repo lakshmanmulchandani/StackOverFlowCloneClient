@@ -88,3 +88,10 @@
 .display-tags-time .display-time {
     font-size: 13px;
 }
+
+
+@media (max-width: 900px) {
+    .main-bar {
+      width: 100%;
+    }
+  }

@@ -1,9 +1,12 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://stackoverflowclonelaksh.herokuapp.com/",
+  // baseURL: "https://stackoverflowclonelaksh.herokuapp.com/",
+  // RUNNING LOCAL
+  baseURL: "http://localhost:5000/",
 });
 
+// Getting the token from local storage and adding it in each request
 API.interceptors.request.use((req) => {
   if (localStorage.getItem("Profile")) {
     req.headers.authorization = `Bearer ${
@@ -13,6 +16,7 @@ API.interceptors.request.use((req) => {
   return req;
 });
 
+// Called from actions with auth data to send user info and return token
 export const logIn = (authData) => API.post("/user/login", authData);
 export const signUp = (authData) => API.post("/user/signup", authData);
 

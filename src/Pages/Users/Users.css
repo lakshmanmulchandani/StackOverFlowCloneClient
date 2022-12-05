@@ -22,3 +22,14 @@
 .user-profile-link h5{
     margin: 0px 10px;
 }
+
+.hamburger 
+{
+    display: none;
+}
+@media (max-width: 560px) {
+    .hamburger {
+        display: block;
+        padding-top: 6px;
+      }
+}

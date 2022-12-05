@@ -44,3 +44,9 @@
     background-color: rgb(225, 225, 225);
     border-right: solid 3px #ef8236;
 }
+
+@media (max-width: 500px) {
+    .left-sidebar {
+      display: none;
+    }
+  }

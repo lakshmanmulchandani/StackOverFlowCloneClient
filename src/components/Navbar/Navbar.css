@@ -47,21 +47,24 @@
 
 .navbar form{
     flex-grow: 1;
-    padding: 0px 12px;
+    padding: 0px 22px;
     position: relative;
+    float: right;
 }
 
 .navbar form input{
-    min-width: 90%;
+    width:90%;
+    /* min-width: 40%; */
     margin: 0;
     padding: 8px 10px 8px 32px;
     font-size: 13px;
     border: solid 1px #0000003e;
     border-radius: 3px;
+    float: right;
 }
 
 .navbar form .search-icon {
-    position: absolute;
+    position: relative;
     left: 25px;
     top: 8px;
 }
@@ -76,4 +79,24 @@
 
 .nav-links:hover{
     background-color: #d3e4eb;
+}
+
+@media (max-width: 900px)
+{
+ .togo{
+    display: none;
+ }
+}
+@media (max-width: 500px)
+{
+ .togolater{
+    display: none;
+ }
+}
+
+@media (max-width: 500px)
+{
+    .navbar form input{
+    width: 60%;
+ }
 }

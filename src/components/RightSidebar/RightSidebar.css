@@ -3,6 +3,9 @@
     width: 300px;
     margin: 40px 0px 15px 24px;
     font-size: 15px;
+
+
+
 }
 
 .widget{
@@ -67,3 +70,9 @@
     border-radius: 2px;
     font-size: 13px;
 }
+
+@media (max-width: 900px) {
+    .right-sidebar {
+      display: none;
+    }
+  }
