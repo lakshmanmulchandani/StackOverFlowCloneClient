@@ -37,7 +37,7 @@ const Auth = () => {
 
   return (
     <section class='auth-section'>
-      {isSignup && <AboutAuth />}
+      {isSignup}
       <div class='auth-container-2'>
         {!isSignup && (
           <img src={icon} alt='stack overflow' className='login-logo' />
