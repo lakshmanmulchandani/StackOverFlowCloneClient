@@ -35,3 +35,19 @@ export const deleteAnswer = (id, answerId, noOfAnswers) =>
 export const getAllUsers = () => API.get("/user/getAllUsers");
 export const updateProfile = (id, updateData) =>
   API.patch(`/user/update/${id}`, updateData);
+
+export const follow = (user_id, Luserid) => {
+  API.put(`/user/${user_id}/follow`, {id: Luserid});
+};
+
+export const unfollow = (user_id, Luserid) => {
+  API.put(`/user/${user_id}/unfollow`, {id: Luserid});
+};
+
+export const createPost = (postData) => {
+  API.post("Community/CreatePost", postData);
+};
+export const getAllPosts = () => API.get("/Community/get");
+export const deletePost = (id) => API.delete(`/Community/delete/${id}`);
+export const votePost = (id, value) =>
+  API.patch(`/Community/vote/${id}`, {value});

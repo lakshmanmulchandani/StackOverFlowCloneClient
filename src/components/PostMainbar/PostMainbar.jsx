@@ -1,44 +1,47 @@
 import React from "react";
 import {useLocation, useNavigate} from "react-router-dom";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import "./HomeMainbar.css";
-import QuestionList from "./QuestionList";
+import QuestionList from "./PostsList";
+import {fetchAllPosts} from "../../actions/posts";
+import {Dispatch} from "redux";
 
-const HomeMainbar = () => {
+const PostMainbar = () => {
   const location = useLocation();
   const user = 1;
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-  const questionsList = useSelector((state) => state.questionsReducer);
+  var postsList = useSelector((state) => state.postsReducer);
+  postsList = postsList.data;
+  console.log("postsList");
 
+  console.log(postsList);
+  // console.log(questionsList);
   const checkAuth = () => {
     if (user === null) {
       alert("login or signup to ask a question");
       navigate("/Auth");
     } else {
-      navigate("/AskQuestion");
+      navigate("/CreatePost");
     }
   };
 
   return (
     <div className='main-bar'>
       <div className='main-bar-header'>
-        {location.pathname === "/" ? (
-          <h1>Top Questions</h1>
-        ) : (
-          <h1>All Questions</h1>
-        )}
+        <h1>All Posts</h1>
         <button onClick={checkAuth} className='ask-btn'>
-          Ask Question
+          Create Post
         </button>
       </div>
       <div>
-        {questionsList.data === null ? (
+        {postsList === null ? (
           <h1>Loading...</h1>
         ) : (
           <>
-            <p>{questionsList.data.length} questions</p>
-            <QuestionList questionsList={questionsList.data} />
+            <p>{postsList.length} posts</p>
+            <QuestionList postsList={postsList} />
           </>
         )}
       </div>
@@ -46,4 +49,4 @@ const HomeMainbar = () => {
   );
 };
 
-export default HomeMainbar;
+export default PostMainbar;
