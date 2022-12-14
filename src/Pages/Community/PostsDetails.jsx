@@ -119,7 +119,7 @@ const PostsDetails = () => {
                           )}
                         </div>
                         <div>
-                          <p>asked {moment(post.askedOn).fromNow()}</p>
+                          <p>posted by {moment(post.askedOn).fromNow()}</p>
                           <Link
                             to={`/Users/${post.userId}`}
                             className='user-link'
