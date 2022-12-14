@@ -1,9 +1,9 @@
 import axios from "axios";
 
 const API = axios.create({
-  // baseURL: "https://stackoverflowclonelaksh.herokuapp.com/",
+  baseURL: "https://stackoverflowserver-fqm1.onrender.com/",
   // RUNNING LOCAL
-  baseURL: "http://localhost:5000/",
+  // baseURL: "http://localhost:5000/",
 });
 
 // Getting the token from local storage and adding it in each request
