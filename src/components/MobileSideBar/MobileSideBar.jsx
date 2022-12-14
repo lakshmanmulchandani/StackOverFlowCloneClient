@@ -90,6 +90,9 @@ const MobileSideBar = (props) => {
               <Link activeClassName='active' className='link' to='/users'>
                 <p>Users</p>
               </Link>
+              <Link activeClassName='active' className='link' to='/Community'>
+                <p>Community</p>
+              </Link>
             </div>
           </div>
         </div>
