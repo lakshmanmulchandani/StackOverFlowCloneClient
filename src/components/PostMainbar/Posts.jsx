@@ -1,17 +1,12 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import moment from "moment";
-
+import Globe from "../../assets/Globe.svg";
 const Posts = ({post}) => {
   return (
     <div className='display-question-container'>
-      <div className='display-votes-ans'>
-        <p>{post.upVote.length - post.downVote.length}</p>
-        <p>votes</p>
-      </div>
-      <div className='display-votes-ans'>
-        <p>{post.noOfAnswers}</p>
-        <p>answers</p>
+      <div className='postPic'>
+        <img src={post.selectedFile || Globe} alt='Globe' />
       </div>
       <div className='display-question-details'>
         <Link to={`/Community/${post._id}`} className='question-title-link'>
