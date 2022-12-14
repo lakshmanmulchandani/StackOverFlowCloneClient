@@ -19,7 +19,7 @@ const Posts = ({post}) => {
             ))}
           </div>
           <p className='display-time'>
-            posted by {moment(post.askedOn).fromNow()} {post.userPosted}
+            posted {moment(post.askedOn).fromNow()} {post.userPosted}
           </p>
         </div>
       </div>
